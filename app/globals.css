@@ -10,3 +10,7 @@
 .image {
   background-image: url('./assets/background_image.jpg');
 }
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
