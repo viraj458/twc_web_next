@@ -21,18 +21,18 @@ export default function ContactList({ contacts }: Props): JSX.Element {
         <table>
           <tbody>
             <tr className=" text-m">
-              <th className="px-8 py-[6px]"> </th>
+              <th className="px-5 py-[6px]"> </th>
               <th className="pr-[120px]">full name</th>
               <th className="pr-14">gender</th>
-              <th className="pr-[180px]">email</th>
-              <th className="pr-[80px]">phone number</th>
+              <th className="pr-[200px]">email</th>
+              <th className="pr-[60px]">phone number</th>
               <th className="pr-5"> </th>
-              <th> </th>
+              <th className="pr-5"> </th>
             </tr>
 
             {contacts.map((contact: Contact) => (
               <tr key={contact.id}>
-                <td className="px-8 py-[6px]">
+                <td className="px-5 py-[6px]">
                   {contact.gender === 'Male' ? (
                     <Image className="w-10 h-10" src={male} alt="Male" />
                   ) : (

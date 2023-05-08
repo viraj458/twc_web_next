@@ -57,36 +57,36 @@ const contacts = [
 
 export default function Contacts() {
   return (
-    <div className="image w-screen h-screen flex  items-center justify-center fixed">
-      <div className="absolute w-[1530px] h-[980px] bg-[#083F46] rounded-full rotate-[20deg]">
-        <div className="justify-center ml-[300px] mt-[200px] rotate-[-20deg]">
+    <div className="image w-screen h-screen flex items-center justify-center fixed">
+      <div className="w-[1530px] h-[980px] bg-[#083F46] rounded-full rotate-[20deg] fixed" />
+      <div className="absolute flex flex-col items-center">
+        <div className="ml-[-760px]">
           <LogoWhite />
-
-          <div className="flex gap-[610px] mb-5 mt-9">
-            <p className="font-bold text-3xl text-white">Contacts</p>
-            <Link href="/contacts/new">
-              <button
-                type="button"
-                className="border-[1px] rounded-full px-5 py-1 text-[18px] border-white font-semibold text-white"
-              >
-                add new contact
-              </button>
-            </Link>
-          </div>
-
-          <div className="bg-white rounded-3xl mr-[320px] h-60 overflow-y-scroll scrollbar-none">
-            {contacts && <ContactList contacts={contacts} />}
-          </div>
-
-          <div>
+        </div>
+        <div className="flex gap-[580px] mb-5 mt-9">
+          <p className="font-bold text-3xl text-white">Contacts</p>
+          <Link href="/contacts/new">
             <button
               type="button"
-              className="flex ml-[900px] mt-20 py-1 text-[18px] text-white font-bold underline underline-offset-2"
+              className="border-[1px] rounded-full px-5 py-1 text-[18px] border-white font-semibold text-white"
             >
-              <BiLogOutCircle className="w-7 h-7 mr-2" />
-              logout
+              add new contact
             </button>
-          </div>
+          </Link>
+        </div>
+
+        <div className="bg-white rounded-3xl h-60 overflow-y-scroll scrollbar-none">
+          {contacts && <ContactList contacts={contacts} />}
+        </div>
+
+        <div>
+          <button
+            type="button"
+            className="flex ml-[900px] mt-20 py-1 text-[18px] text-white font-bold underline underline-offset-2"
+          >
+            <BiLogOutCircle className="w-7 h-7 mr-2" />
+            logout
+          </button>
         </div>
       </div>
     </div>
