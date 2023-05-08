@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { BiLogOutCircle } from 'react-icons/bi';
 import LogoWhite from '../components/LogoWhite';
 import ContactList from '../components/ContactList';
+import DeleteConfirmMsg from './DeleteConfirmMsg';
+import DeleteDoneMsg from './DeleteDoneMsg';
 
 const contacts = [
   {
@@ -56,6 +58,8 @@ const contacts = [
 ];
 
 export default function Contacts() {
+
+
   return (
     <div className="image w-screen h-screen flex items-center justify-center fixed">
       <div className="w-[1530px] h-[980px] bg-[#083F46] rounded-full rotate-[20deg] fixed" />
@@ -89,6 +93,8 @@ export default function Contacts() {
           </button>
         </div>
       </div>
+      {/* <DeleteConfirmMsg/>
+      <DeleteDoneMsg/> */}
     </div>
   );
 }
